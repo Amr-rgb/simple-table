@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  height: 100vh;
+  min-height: 800px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  padding: 0 1rem;
+}
+
+main {
+  overflow-x: auto;
+}
+
+table {
+  width: 90vw;
+  min-width: 920px;
+  border-collapse: collapse;
+}
+
+table tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid transparent;
+  border-right: 2px solid #4abae8;
+  cursor: pointer;
+}
+
+table tr.active {
+  border: 2px solid #4abae8;
+}
+
+table tr.active td {
+  font-weight: 500;
+}
+
+table tr:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+table tr td {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1.4rem 2rem;
+}
+
+table tr td:not(:first-child) {
+  text-align: right;
+}
+
+table tr td:nth-child(odd) {
+  background: #f0f1f3;
+}
+
+table tr td:first-child {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: #4abae8;
+  color: #fff;
+}
+/*# sourceMappingURL=styles.css.map */
