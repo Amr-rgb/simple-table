@@ -18,13 +18,53 @@ body {
   padding: 0 1rem;
 }
 
+.btns {
+  margin-bottom: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btns button {
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #4abae8;
+  border: 1px solid #4abae8;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btns button:hover, .btns button.active {
+  background: #4abae8;
+  color: #fff;
+}
+
+.btns button:active {
+  background: #229ecf;
+}
+
+.btns button:last-child {
+  margin-left: 0.5rem;
+}
+
 main {
   overflow-x: auto;
 }
 
 table {
   width: 90vw;
-  min-width: 920px;
   border-collapse: collapse;
 }
 
@@ -32,10 +72,6 @@ table tbody {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 table tr {
@@ -43,7 +79,6 @@ table tr {
   display: -ms-flexbox;
   display: flex;
   border: 2px solid transparent;
-  border-right: 2px solid #4abae8;
   cursor: pointer;
 }
 
@@ -55,19 +90,11 @@ table tr.active td {
   font-weight: 500;
 }
 
-table tr:not(:last-child) {
-  margin-bottom: 0.7rem;
-}
-
 table tr td {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 1.4rem 2rem;
-}
-
-table tr td:not(:first-child) {
-  text-align: right;
 }
 
 table tr td:nth-child(odd) {
@@ -79,5 +106,50 @@ table tr td:first-child {
   letter-spacing: 0.5px;
   background: #4abae8;
   color: #fff;
+}
+
+table.rowView {
+  min-width: 920px;
+}
+
+table.rowView tbody {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+table.rowView tbody tr {
+  border-right: 2px solid #4abae8;
+}
+
+table.rowView tbody tr:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+table.rowView tbody tr td:not(:first-child) {
+  text-align: right;
+}
+
+table.colView {
+  min-width: 1020px;
+}
+
+table.colView tbody tr {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+table.colView tbody tr:not(:last-child) {
+  margin-right: 0.7rem;
+}
+
+table.colView tbody tr td {
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

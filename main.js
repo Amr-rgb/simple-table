@@ -45,3 +45,20 @@ const setIsActive = (e) => {
   trows.forEach((row) => row.classList.remove("active"));
   e.target.parentNode.classList.add("active");
 };
+
+const table = document.getElementById("table");
+const rowBtn = document.getElementById("rowViewBtn");
+const colBtn = document.getElementById("colViewBtn");
+
+rowBtn.onclick = () => {
+  rowBtn.classList.add("active");
+  colBtn.classList.remove("active");
+  table.classList.remove("colView");
+  table.classList.add("rowView");
+};
+colBtn.onclick = () => {
+  colBtn.classList.add("active");
+  rowBtn.classList.remove("active");
+  table.classList.remove("rowView");
+  table.classList.add("colView");
+};
